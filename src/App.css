@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  color: #212529;
+  text-align: left;
+  background: #ffff;
+  font-size: 16px;
+  line-height: 1.8;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.banner {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.translate {
+  transform: translateZ(0);
+}
+@media screen and (max-width: 900px) {
+  .display {
+    display: none !important;
+  }
+  .main-display {
+    width: 100% !important;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+#center {
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.margin {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 5rem;
+}
+.margin-container {
+  flex-basis: 0 !important;
+  flex-grow: 1;
+  padding-left: 3rem;
+
+  width: 100%;
+  max-width: 20rem;
+}
+
+.divider {
+  --divider-border-style: solid;
+  --divider-color: #ffffff4a;
+  --divider-border-width: 2px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 20rem;
+}
+
+.divider-separator {
+  border-top: var(--divider-border-width) var(--divider-border-style)
+    var(--divider-color);
+}
+
+.icon {
+  display: table-cell;
+  vertical-align: top;
+  width: 40px;
+  font-size: 18px;
+  padding-top: 2px;
   color: white;
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text {
+  line-height: 1.8;
+  font-weight: 400;
+  color: #fff;
+  display: table-cell;
+  vertical-align: top;
 }
