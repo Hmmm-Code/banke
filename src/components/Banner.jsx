@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 
 const Banner = () => {
-  const images = [
-    {
-      src: "https://www.banke.ae/wp-content/uploads/2022/06/1647964365-20220322-154755-plain.jpg",
-    },
-    {
-      src: "https://www.banke.ae/wp-content/uploads/2022/03/1647422826-bi-s-20-1842-6-plain.jpg",
-    },
-    {
-      src: "https://www.banke.ae/wp-content/uploads/2021/09/1632311299-bi-s-20-0280-7-plain.jpg",
-    },
-    {
-      src: "https://www.banke.ae/wp-content/uploads/2022/02/1623909830-bi-s-20-0578-5-plain.jpg",
-    },
-  ];
+  const [images, setImages] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const images = [
+      {
+        src: "https://www.banke.ae/wp-content/uploads/2022/06/1647964365-20220322-154755-plain.jpg",
+      },
+      {
+        src: "https://www.banke.ae/wp-content/uploads/2022/03/1647422826-bi-s-20-1842-6-plain.jpg",
+      },
+      {
+        src: "https://www.banke.ae/wp-content/uploads/2021/09/1632311299-bi-s-20-0280-7-plain.jpg",
+      },
+      {
+        src: "https://www.banke.ae/wp-content/uploads/2022/02/1623909830-bi-s-20-0578-5-plain.jpg",
+      },
+    ];
+    if (images != null) {
+      setImages(images);
+      setLoading(false);
+    } else {
+      setImages({});
+    }
+    console.log(images);
+  }, []);
 
   const settings = {
     autoplay: true,
@@ -70,17 +82,21 @@ const Banner = () => {
                       <div className=" visible opacity-100 select-none touch-pan-y">
                         <div className="translate m-0 p-0 truncate">
                           <div className="opacity-100 top-0 left-0">
-                            <Slider {...settings}>
-                              {images.map((item) => (
-                                <div id="center" clasName="h-60 ">
-                                  <img
-                                    src={item.src}
-                                    alt="slider"
-                                    className="rounded-lg m-0 p-3 h-[17rem] w-full max-w-md"
-                                  />
-                                </div>
-                              ))}
-                            </Slider>
+                            {loading ? (
+                              "loading"
+                            ) : (
+                              <Slider {...settings}>
+                                {images.map((item) => (
+                                  <div id="center" className="h-60 ">
+                                    <img
+                                      src={item.src}
+                                      alt="slider"
+                                      className="rounded-lg m-0 p-3 h-[17rem] w-full max-w-md"
+                                    />
+                                  </div>
+                                ))}
+                              </Slider>
+                            )}
                           </div>
                         </div>
                       </div>
