@@ -27,13 +27,13 @@ const Navigation = () => {
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <a href="#">
+                    <button href="#">
                       <img
                         className="h-8 w-15"
                         src="https://www.banke.ae/wp-content/uploads/2021/08/Banke-black-logo.png"
                         alt="Workflow"
                       />
-                    </a>
+                    </button>
                   </div>
                   <div className="hidden md:block ml-10">
                     <div className="ml-18 flex items-baseline space-x-4">

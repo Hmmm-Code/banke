@@ -62,21 +62,21 @@ const Footer = () => {
               <h2 className="text-xl font-semibold mb-7">Explore</h2>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="#">
+                  <button href="#">
                     <span className="icon-long-arrow-right mr-2"></span>
                     Residential
-                  </a>
+                  </button>
                 </li>
                 <li className="mb-2">
-                  <a href="#">
+                  <button href="#">
                     <span className="icon-long-arrow-right mr-2"></span>
                     Commercial
-                  </a>
+                  </button>
                 </li>
                 <li className="mb-2">
-                  <a href="#">
+                  <button href="#">
                     <span className="icon-long-arrow-right mr-2"></span>Off-Plan
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -86,27 +86,27 @@ const Footer = () => {
               <h2 className="text-xl font-semibold mb-7">Quick Links</h2>
               <ul className="list-unstyled">
                 <li className="mb-2">
-                  <a href="#">
+                  <button href="#">
                     <span className="icon-long-arrow-right mr-2"></span>About us
-                  </a>
+                  </button>
                 </li>
                 <li className="mb-2">
-                  <a href="#">
+                  <button href="#">
                     <span className="icon-long-arrow-right mr-2"></span>Contact
                     us
-                  </a>
+                  </button>
                 </li>
                 <li className="mb-2">
-                  <a href="#">
+                  <button href="#">
                     <span className="icon-long-arrow-right mr-2"></span>
                     Consultants
-                  </a>
+                  </button>
                 </li>
                 <li className="mb-2">
-                  <a href="#">
+                  <button href="#">
                     <span className="icon-long-arrow-right mr-2"></span>Privacy
                     Policy
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -123,21 +123,21 @@ const Footer = () => {
                     <span className="text">Sharjah UAE</span>
                   </li>
                   <li className="mb-2">
-                    <a href="#">
+                    <button href="#">
                       <span className="icon icon-phone">
                         <ContactsIcon />
                       </span>
                       <span className="text">+971 58 2361 890</span>
-                    </a>
+                    </button>
                   </li>
                   <li className="mb-2">
-                    <a href="#">
+                    <button href="#">
                       <span className="icon ">
                         <MailIcon />
                       </span>
 
                       <span className="text">skcbskcb0@gmail.com</span>
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
